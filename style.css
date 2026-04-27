@@ -1,0 +1,997 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+/* Vivian Salas */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/* Preseting */
+:root{
+    /* Colors */
+    --blue: #007BFF;
+    --green: #0fb44c;
+    --lt-green: #f3fff2;
+    --text: #2b2b2b;
+    --white: #FFFFFF;
+    --lt-blue-tint: #F4F8FF;
+    --lt-gray: #F0F0F0;
+
+    /* Fonts */
+    --headings: "Poppins", sans-serif;
+    --body: "Inter", sans-serif;
+}
+
+/* Desktop Dimension */
+.menu-toggle, .hamburger{
+    display: none;
+    margin-left: 45vw;
+}
+
+/* NavBar */
+a{
+    text-decoration: none;
+}
+
+.navbar{
+    background: var(--white);
+    font-family: var(--headings);
+    padding: 20px 80px;
+}
+
+.navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navdiv img{
+    width: 250px;
+    height: 50px;
+}
+
+.logo a{
+    font-size: 35px;
+    font-weight: 600;
+    color: black;
+}
+
+ul{
+    margin-left: 500px;
+}
+
+li{
+    list-style: none;
+    display: inline-block;
+}
+
+li a{
+    color: black;
+    font-size: 18px;
+    margin-right: 25px;
+}
+
+/* Buttons */
+button{
+    background-color: var(--white);
+    border-radius: 25px;
+    margin-left: 10px;
+    padding: 10px;
+    width: 90px;
+    border-color: #007BFF;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover{
+    background-color: var(--blue);
+}
+
+button a{
+    color: var(--blue);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+button:hover a{
+    color: var(--white);
+}
+
+/* H1 */
+.content h1{
+    font-size: 50px;
+    font-family: var(--headings);
+    font-weight: 600;
+    color: var(--white);
+}
+
+.main-check-in h1{
+    font-size: 50px;
+    font-family: var(--headings);
+    font-weight: 600;
+    color: var(--text);
+}
+
+.login-h1{
+    font-size: 50px;
+    font-family: var(--headings);
+    font-weight: 600;
+    color: var(--text);
+    padding-top: 60px;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.main-contact h1{
+    font-size: 50px;
+    font-family: var(--headings);
+    font-weight: 600;
+    color: var(--text);
+    text-align: center;
+    padding-top: 60px;
+}
+
+.dashboard-h1{
+    font-size: 50px;
+    font-family: var(--headings);
+    font-weight: 600;
+    color: var(--text);
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* Hero Section */
+.main-check-in{
+    padding: 60px;
+    background-color: var(--lt-blue-tint);
+    height: 50vh;
+}
+
+.main-check-in p{
+    font-family: var(--body);
+    padding: 30px 0;
+    color: var(--text);
+    font-size: 25px;
+}
+
+.hero-section{
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.5)), url("images/hero-image.jpeg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 50vh;
+}
+
+.content{
+    padding: 60px;
+}
+
+.content p{
+    font-family: var(--body);
+    padding: 30px 0;
+    color: var(--white);
+    font-size: 25px;
+}
+
+.content p:nth-of-type(even){
+    color: var(--text);
+    margin-left: 10px;
+}
+
+.content button{
+    width: 200px;
+    background-color: var(--blue);
+    border-radius: 8px;
+}
+
+.content button a{
+    color: var(--white);
+    font-family: var(--body);
+}
+
+.content button:hover{
+    background-color: var(--white);
+}
+
+.content button:hover a{
+    color: var(--blue);
+}
+
+.content p:nth-of-type(2){
+    border-radius: 20px;
+    background-color: var(--lt-green);
+    padding: 15px;
+    margin-top: 30px;
+    width: 350px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.content p:nth-of-type(2) span{
+    color: var(--green);
+    font-weight: bold;
+}
+
+/* Hot it Works Section */
+.how-it-works{
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    padding: 30px;
+    margin: 50px;
+}
+
+.how-it-works h2{
+    text-align: center;
+    font-size: 50px;
+    font-family: var(--headings);
+    font-weight: 600;
+}
+
+.how-it-works p{
+    font-size: 20px;
+    font-family: var(--body);
+    padding: 0 80px;
+}
+
+.how-it-works > p{
+    text-align: center;
+    padding: 25px 0;
+    font-size: 25px;
+}
+
+.how-it-works section{
+    border-radius: 20px;
+    padding: 40px 80px;
+}
+
+.step-1, .step-3{
+    border-radius: 10px;
+    border: 2px solid var(--blue);
+    text-align: center;
+    background-color: var(--lt-blue-tint);
+}
+
+.step-2{
+    border-radius: 10px;
+    border: 2px solid var(--green);
+    background-color: var(--lt-green);
+    text-align: center;
+}
+
+.step-1 span, .step-3 span{
+    color: var(--blue);
+}
+
+.step-2 span{
+    color: var(--green);
+}
+
+.steps{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.steps img{
+    height: 160px;
+    width: 130px;
+}
+
+.steps p{
+    line-height: 2rem;
+    padding-top: 30px;
+}
+
+.steps h3{
+    font-size: 20px;
+    font-family: var(--headings);
+    font-weight: 600;
+    padding-bottom: 20px;
+}
+
+/* About us Section */
+.about{
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+    padding: 30px;
+    margin: 50px;
+}
+
+.about h2{
+    text-align: center;
+    font-size: 50px;
+    font-family: var(--headings);
+    font-weight: 600;
+}
+
+.about-items{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.about-items p{
+    font-size: 25px;
+    font-family: var(--body);
+    padding: 30px;
+    line-height: 1.5;
+}
+
+.heart{
+    margin-top: 30px;
+    height: 55vh;
+    border-radius: 30px;
+}
+
+/* Check in Form */
+.check-in-form{
+    padding: 30px;
+    margin-top: -250px;
+    background-color: var(--white);
+    width: 30vw;
+    border-radius: 15px;
+    margin-left: 60px;
+    border: 4mm double var(--lt-blue-tint);
+}
+
+.check-in-form label{
+    padding: 10px 0;
+    font-weight: bold;
+    font-family: var(--body);
+}
+
+.confirm-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: center;
+    padding: 30px;
+}
+
+.join-queue{
+    display: flex;
+    justify-content: center;
+}
+
+.check-in-form button{
+    width: 200px;
+    background-color: var(--blue);
+    border-radius: 8px;
+    color: var(--white);
+    font-family: var(--body);
+}
+
+.check-in-form button:hover{
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+.check-in-form button:hover a{
+    color: var(--blue);
+}
+
+/* Queue Status Page */
+.queue-status-h1{
+    font-size: 50px;
+    font-family: var(--headings);
+    font-weight: 600;
+    color: var(--text);
+    text-align: center;
+}
+
+.main-queue-status{
+    margin-top: 10px;
+    padding: 60px;
+    height: 50vh;
+    text-align: center;
+}
+
+.position-in-line{
+    padding: 30px;
+    margin: 2.5% 5%;
+    background-color: var(--white);
+    border-radius: 15px;
+    border: 4mm double var(--lt-blue-tint);
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.position-in-line p{
+    padding: 12px;
+    font-family: var(--body);
+}
+
+.position-in-line h2{
+    padding-bottom: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: var(--headings);
+}
+
+.position-in-line button{
+    font-weight: bold;
+    font-family: var(--headings);
+    width: 15vw;
+    margin-top: 20px;
+}
+
+/* Dashboard Page */
+.main-dashboard{
+    background-color: var(--lt-gray);
+}
+
+.dashboard-h1{
+    padding: 60px;
+}
+
+.first-row{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.first-row div{
+    background-color: var(--white);
+    box-shadow: 0 4px 10px var(--text);
+    margin: 0 30px;
+    padding: 30px;
+    border-radius: 25px;
+    border: 2px solid var(--lt-gray);
+}
+
+.first-row div p{
+    padding: 8px 0;
+    font-family: var(--body);
+}
+
+.first-row div p:nth-of-type(even){
+    font-weight: bold;
+}
+
+.first-row div p span{
+    color: var(--green);
+    font-weight: bold;
+}
+
+.average-wait-time-chart, .patients-vs-remaining{
+    border-radius: 15px;
+    margin: 5vh 0 2vh;
+    width: 70vw;
+    height: 75vh;
+    box-shadow: 0 4px 10px var(--text);
+}
+
+.second-row, .third-row{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.live-queue-overview{
+    background-color: var(--white);
+    border-radius: 25px;
+    box-shadow: 0 4px 10px var(--text);
+    width: 70vw;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.live-queue-overview table{
+    width: 100%;
+    text-align: center;
+}
+
+.view-full-queue{
+    display: block;
+    margin: 20px auto 0 auto;
+    width: 200px;
+    text-align: center;
+}
+
+.live-queue-overview th,
+.live-queue-overview td{
+    padding: 12px;
+    border-bottom: 1px solid var(--lt-gray);
+}
+
+.live-queue-overview h2{
+    text-align: center;
+    padding: 2vh 0;
+    font-size: 25px;
+    font-family: var(--headings);
+    font-weight: bold;
+}
+
+.view-full-queue{
+    width: 200px;
+    background-color: var(--blue);
+    border-radius: 8px;
+    color: var(--white);
+    font-family: var(--body);
+    display: block;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}
+
+.view-full-queue a{
+    color: var(--white);
+    font-family: var(--body);
+}
+
+.view-full-queue:hover{
+    background-color: var(--white);
+}
+
+.view-full-queue:hover{
+    color: var(--blue);
+}
+
+/* FAQ Page */
+.faq-h1{
+    font-size: 50px;
+    font-family: var(--headings);
+    font-weight: 600;
+    color: var(--text);
+    text-align: center;
+    margin-top: 10px;
+    padding: 60px;
+}
+
+.q1 h2, .q2 h2, .q3 h2{
+    font-size: 25px;
+    font-family: var(--headings);
+    font-weight: 600;
+    padding: 25px 25px 10px 25px;
+}
+
+.q1 p, .q2 p, .q3 p{
+    font-family: var(--body);
+    padding: 0 25px 15px;
+    line-height: 1.3rem;
+}
+
+.q1, .q2, .q3{
+    width: 55vw;
+    border-radius: 10px;
+    border: 1px solid var(--white);
+    box-shadow: 0 4px 10px gray;
+    background-color: var(--white);
+    margin: 0 auto 30px auto;
+}
+
+/* Contact Page */
+.main-contact > p{
+    font-family: var(--body);
+    text-align: center;
+    padding: 40px 0 30px;
+}
+
+.left, .right{
+    width: 40rem !important;
+    height: 53vh;
+    border-radius: 10px;
+    border: 3px solid var(--lt-blue-tint);
+    box-shadow: 0 20px 10px var(--lt-blue-tint);
+    background-color: var(--white);
+    margin: 0 auto 30px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.left h2, .right h2{
+    font-size: 20px;
+    font-family: var(--headings);
+    font-weight: bold;
+    text-align: left;
+}
+
+.left > p{
+    font-weight: lighter;
+    font-family: var(--body);
+    color: grey;
+    text-align: left;
+    padding: 20px 0;
+}
+
+.right p{
+    margin: 10px 0;
+}
+
+.right p:nth-of-type(even){
+    font-family: var(--body);
+}
+
+.right h2{
+    margin-bottom: 20px;
+}
+
+.main-contact {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.main-contact .left,
+.main-contact .right {
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    margin: 20px;
+}
+
+.contact-form{
+    text-align: left;
+}
+
+.contact-form input,
+.contact-form select {
+  border: 2px solid var(--lt-blue-tint);
+  padding: 8px;
+  border-radius: 5px;
+  outline: none;
+  margin: 10px 0;
+  font-family: var(--body);
+}
+
+/* Focus */
+.contact-form input:focus,
+.contact-form select:focus {
+  border-color: var(--blue);
+}
+
+#contact-submit-button{
+    margin-top: 15px;
+    font-family: var(--body);
+    font-weight: bold;
+}
+
+.bold{
+    font-weight: bold;
+    font-family: var(--headings);
+}
+
+svg{
+    margin-right: 10px;
+}
+
+.map{
+    width: 20vw;
+    height: 15vh;
+}
+
+.btn-outline-primary{
+    font-family: var(--body);
+}
+
+/* Login Form */
+.login-form{
+    width: 40rem;
+    height: 20vh;
+    border-radius: 10px;
+    border: 3px solid var(--lt-blue-tint);
+    box-shadow: 0 20px 10px var(--lt-blue-tint);
+    background-color: var(--white);
+    padding: 30px;
+    font-size: 20px;
+    font-family: var(--headings);
+    font-weight: bold;
+    margin: 0 auto;
+}
+
+.login-main p{
+    font-family: var(--body);
+    color: #A9A9A9;
+    font-size: 20px;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+/* Footer */
+footer{
+    background-color: var(--text);
+    height: 10vh;
+    color: var(--white);
+    font-family: var(--headings);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+footer a{
+    color: var(--white);
+}
+
+/* Bodies */
+body {
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.queue-status-body, .main-faq{
+    background: linear-gradient(
+    135deg,
+    #eaf4ff 0%,
+    var(--lt-blue-tint) 50%,
+    var(--lt-green) 100%
+  );
+}
+
+/* Main */
+main {
+    flex: 1;
+}
+
+/* Tablet Dimensions */
+@media screen and (max-width: 1024px) {
+    /* Navbar */
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    ul {
+        margin-left: 10vw;
+        display: flex;
+        gap: 15px;
+    }
+
+    li a {
+        font-size: 16px;
+        margin-right: 10px;
+    }
+
+    
+    .check-in-form{
+        margin-top: -25vh;
+        margin-bottom: 10vh;
+    }
+
+    /* Hero & Content */
+    .content h1, .main-check-in h1, .dashboard-h1 {
+        font-size: 36px; 
+    }
+
+    /* Flex Items */
+    .steps, .about-items, .main-contact {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left, .right {
+        width: 90% !important;
+        height: auto;
+    }
+
+    /* Check in form */
+    .check-in-form{
+        width: 85vw;
+    }
+
+    .position-in-line button{
+        width: 20vw;
+    }
+    
+    .average-wait-time-chart, .patients-vs-remaining, .live-queue-overview{
+        width: 93vw;
+    }
+}
+
+/* Mobile Dimensions */
+@media screen and (max-width: 600px) {
+
+    /* NAVBAR */
+    .navdiv {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    ul {
+        margin-left: 0;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 10px;
+    }
+
+    li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .navdiv img {
+        width: 180px;
+        height: auto;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: block;
+        font-size: 35px;
+    }
+
+    /* Stack nav */
+    .navdiv {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Hide menu */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding: 20px;
+    }
+
+    /* Show menu when checked */
+    .menu-toggle:checked + .hamburger + .nav-menu {
+        display: flex;
+    }
+
+    .nav-menu li {
+        margin: 15px 0;
+    }
+
+    .nav-menu li a {
+        font-size: 18px;
+    }
+
+    .menu-toggle{
+        display: none;
+    }
+
+    /* HERO */
+    .content {
+        padding: 20px;
+    }
+
+    .content h1 {
+        font-size: 28px;
+    }
+
+    .content p {
+        font-size: 16px;
+    }
+
+    .content button {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    /* HOW IT WORKS */
+    .steps {
+        flex-direction: column;
+    }
+
+    .how-it-works {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    .how-it-works h2 {
+        font-size: 28px;
+    }
+
+    /* ABOUT */
+    .about-items {
+        flex-direction: column;
+    }
+
+    .about-items p {
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .heart {
+        width: 100%;
+        height: auto;
+    }
+
+     .first-row{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 15px;
+    }
+
+    .first-row div{
+        margin: 0;
+        padding: 20px;
+    }
+
+    /* CHECK-IN FORM */
+    .check-in-form {
+        width: 90%;
+        margin: -200px auto;
+    }
+
+    /* CONTACT PAGE */
+    .main-contact .left,
+    .main-contact .right {
+        width: 90%;
+        display: block;
+    }
+
+    /* FAQ */
+    .q1, .q2, .q3 {
+        width: 90%;
+    }
+
+    /* QUEUE STATUS */
+    .position-in-line {
+        padding: 20px;
+    }
+
+    .position-in-line button {
+        width: 100%;
+    }
+
+    /* LOGIN PAGE */
+    .login-form {
+        width: 35rem;
+        height: 20vh;
+    }
+
+    /* FOOTER */
+    footer {
+        flex-direction: column;
+        gap: 10px;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+}
